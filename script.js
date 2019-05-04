@@ -18,6 +18,8 @@ var countriesPop = makeCountryData(popData)
 
 
 
+
+
 geoJson.features.forEach(function(feature){
 
   Object.keys(countriesDeath).forEach(function(country){
@@ -53,8 +55,9 @@ geoJson.features.forEach(function(feature){
         }
       })
       })
-
+      console.log('made it')
       drawMap(geoJson, '1996')
+      console.log('made it end')
   })
 
 
@@ -63,7 +66,7 @@ var drawMap = function(geoData, year){
     //create Projection
     //var projection = d3.geoAlbersUsa()
     //                  .translate([screen.width/2,screen.height/2]);
-
+console.log('made it 2')
     var geoPath = d3.geoPath()
     .projection( d3.albersProjection );
 
@@ -71,6 +74,8 @@ var drawMap = function(geoData, year){
     var svg = d3.select("svg")
                 .attr("width",screen.width)
                 .attr("height",screen.height);
+
+      console.log('made it 3')
 
     var nations = svg.append("g")
       .selectAll("g")
@@ -83,7 +88,7 @@ var drawMap = function(geoData, year){
       .attr("stroke","black")
       .attr("fill","none");
 
-
+console.log('made it 4')
 };
 
 
@@ -97,6 +102,7 @@ var parseData = function(data, country){
           dataDict[country] = state
         }
       })
+      console.log('made it parse')
   return dataDict
 }
 
@@ -105,5 +111,6 @@ var makeCountryData = function(data){
       data.forEach(function(state){
           countriesData[state["Country"]] = parseData(data, state['Country'])
       })
+      console.log('made it countryData')
       return countriesData
 }
