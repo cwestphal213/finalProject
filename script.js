@@ -66,7 +66,7 @@ var drawMap = function(geoData, year){
     //                  .translate([screen.width/2,screen.height/2]);
 
 
-var proj = d3.geoConicEqualArea().translate([screen.width/2, screen.height/2]).scale([250])
+var proj = d3.geoConicEqualArea().translate([screen.width/1.5, screen.height/1.5]).scale([250])
 
     var geoPath = d3.geoPath()
     .projection( proj );
