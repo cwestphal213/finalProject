@@ -60,13 +60,13 @@ geoData.features.forEach(function(feature){
 
 
 var drawMap = function(geoData, year){
-  var screen = {width:1000,height:800}
+  var screen = {width:1200,height:800}
     //create Projection
     //var projection = d3.geoAlbersUsa()
     //                  .translate([screen.width/2,screen.height/2]);
 
 
-var proj = d3.geoConicEqualArea().translate([screen.width/2, screen.height/2]).scale([250])
+var proj = d3.geoConicEqualArea().translate([screen.width/1.5, screen.height/1.5]).scale([250])
 
     var geoPath = d3.geoPath()
     .projection( proj );
