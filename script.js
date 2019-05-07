@@ -94,7 +94,7 @@ var govColor = d3.scaleOrdinal()
                 .range(reds);
 
 var deathPopColor = d3.scaleQuantize()
-                      .domain([0, 4.5])
+                      .domain([0, 3])
                       .range(reds);
 
                   /*d3.max(geoData, function(d){
