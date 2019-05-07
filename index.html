@@ -9,12 +9,41 @@
   button {
     display: block;
   }
+  #tooltip {
+    position: absolute;
+    width: 200px;
+    height:auto;
+    padding: 10px;
+    background-color: white;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    pointer-events: none;}
+
+    #tooltip.hidden{
+      display: none;
+          }
+  #tooltip p {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+  }
   </style>
  </head>
 <body>
+<h1>Journalistic Freedom</h1>
+<div id='tooltip' class='hidden'>
+  <p><b>Year:</b><span id="year">1984</span></p>
+  <p><b>Country:</b><span id="country">Not Found</span></p>
+  <p><b>Population: </b><span id="pop">No Data</span></p>
+  <p><b>Government: </b><span id="gov">No Data</span></p>
+  <p><b>Journalists Killed: </b> <span id="death">0</span></p>
 
+</div>
+<p id='total'></p>
   <svg></svg>
-  <svg classed='buttons'></svg>
+  <svg id='govKey'></svg>
 
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="script.js"></script>
@@ -26,7 +55,8 @@
 <button onclick="runCode(deaths, govType, countryPop, geoJson,'2001')">2001</button>
 <button onclick="runCode(deaths, govType, countryPop, geoJson,'2002')">2002</button>
 <button onclick="runCode(deaths, govType, countryPop, geoJson,'2003')">2003</button>
-
+<button onclick="runCode(deaths, govType, countryPop, geoJson,'2004')">2004</button>
+<button onclick="runCode(deaths, govType, countryPop, geoJson,'2005')">2005</button>
 <button onclick="runCode(deaths, govType, countryPop, geoJson,'2006')">2006</button>
 <button onclick="runCode(deaths, govType, countryPop, geoJson,'2007')">2007</button>
 <button onclick="runCode(deaths, govType, countryPop, geoJson,'2008')">2008</button>
