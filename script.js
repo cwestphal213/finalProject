@@ -60,7 +60,7 @@ geoData.features.forEach(function(feature){
 
 
 var drawMap = function(geoData, year){
-  var screen = {width:1200,height:800}
+  var screen = {width:1500,height:700}
     //create Projection
     //var projection = d3.geoAlbersUsa()
     //                  .translate([screen.width/2,screen.height/2]);
